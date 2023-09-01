@@ -13,6 +13,43 @@
         }
         my_function(5)
     </script>
+    <script>
+        var myFunction =new Function("a","b","return a+b");
+        var x=myFunction(2,3);
+        document.getElementById("demo").innerHTML="The sum is "+x;
+    </script>
+    <script>
+        function product(a,b){
+            return a*b;
+        }
+        let y=product(2,5)*5;
+        document.getElementById("demo").innerHTML="the product is "+ y;
+    </script>
+    <script>
+        var body="return Math.PI*rad*rad";
+        var circle=new Function("rad",body);
+        alert(circle(5));
+    </script>
+    <script>
+        const myFunc=(a,b,c)=>{return a*b*c};
+        let Product=myFunc(2,3,4);
+        document.getElementById("demo").innerHTML="the product of the three digits is "+Product;
+    </script>
+    <script>
+        function* generateFunc(){
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let generator=generateFunc();
+        let one= generator.next();
+        let two= generator.next();
+        let three= generator.next();
+        alert(JSON.stringify(one));
+        alert(JSON.stringify(two));
+        alert(JSON.stringify(three));
+    </script>
+
     
     
 </body>
